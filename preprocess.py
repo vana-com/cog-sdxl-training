@@ -213,9 +213,9 @@ def blip_captioning_dataset(
     images: List[Image.Image],
     text: Optional[str] = None,
     model_id: Literal[
-        "./blip-image-captioning-large",
-        "./blip-image-captioning-base",
-    ] = "./blip-image-captioning-large",
+        "Salesforce/blip-image-captioning-large",
+        "Salesforce/blip-image-captioning-base",
+    ] = "Salesforce/blip-image-captioning-large",
     device=torch.device("cuda" if torch.cuda.is_available() else "cpu"),
     substitution_tokens: Optional[List[str]] = None,
     **kwargs,
