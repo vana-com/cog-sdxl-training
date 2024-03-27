@@ -275,6 +275,9 @@ def face_mask_google_mediapipe(
         if results_detection.detections:
             for detection in results_detection.detections:
                 bboxC = detection.location_data.relative_bounding_box
+                # Ensure bbox dimensions are valid
+                if bboxC.width <= 0 or bboxC.height <= 0:
+                    continue
                 
                 bbox = (
                     int(bboxC.xmin * iw),
