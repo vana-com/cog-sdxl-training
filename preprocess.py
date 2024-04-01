@@ -283,6 +283,10 @@ def face_mask_google_mediapipe(
                     int(bboxC.height * ih),
                 )
 
+                # Ensure bbox dimensions are valid
+                if any(x < 0 for x in bbox):
+                    continue
+
                 # Extract face landmarks
                 face_landmarks = face_mesh.process(
                     image_np[bbox[1] : bbox[1] + bbox[3], bbox[0] : bbox[0] + bbox[2]]
