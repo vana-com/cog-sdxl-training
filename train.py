@@ -13,7 +13,10 @@ from trainer_pti import main
 Wrapper around actual trainer.
 """
 OUTPUT_DIR = "training_out"
-SDXL_MODEL_CACHE = "./sdxl-cache"
+
+# Repo id must use alphanumeric chars or '-', '_', '.', '--' and '..' are forbidden, '-' and '.'
+# cannot start or end the name, max length is 96
+SDXL_MODEL_CACHE = "./sdxlcache"
 
 class TrainingOutput(BaseModel):
     weights: Path
