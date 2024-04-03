@@ -165,7 +165,7 @@ def train(
     )
     
 
-    if os.Ωpath.exists(OUTPUT_DIR):
+    if os.path.exists(OUTPUT_DIR):
         shutil.rmtree(OUTPUT_DIR)
     os.makedirs(OUTPUT_DIR)
 
