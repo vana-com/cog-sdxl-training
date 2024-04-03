@@ -29,7 +29,7 @@ pipe = DiffusionPipeline.from_pretrained(
     variant="fp16",
 )
 
-pipe.save_pretrained("./sdxl-cache", safe_serialization=True)
+pipe.save_pretrained("./sdxlcache", safe_serialization=True)
 
 pipe = DiffusionPipeline.from_pretrained(
     "stabilityai/stable-diffusion-xl-refiner-1.0",
