@@ -170,7 +170,7 @@ def train(
     os.makedirs(OUTPUT_DIR)
 
     main(
-        pretrained_model_name_or_path=SDXL_MODEL_CACHE, # "stabilityai/stable-diffusion-xl-base-1.0"
+        pretrained_model_name_or_path="stabilityai/stable-diffusion-xl-base-1.0",
         instance_data_dir=os.path.join(input_dir, "captions.csv"),
         output_dir=OUTPUT_DIR,
         seed=seed,
